@@ -1,0 +1,121 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(44, 57, 77);
+    padding: 10px 20px;
+}
+
+.png {
+    width: 150px;
+    height: auto;
+}
+
+.divisao {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Impede que as âncoras quebrem linha */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.ancora {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: all 0.3s;
+}
+
+.ancora:hover {
+    font-size: 25px;
+    color: rgb(115, 158, 221);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.email-input,
+.pass-input {
+    margin-right: 10px;
+    padding: 6px;
+    border: 3px solid white;
+    border-radius: 8px;
+    max-width: 100%; /* Impede que o input ultrapasse os limites */
+    outline: none;
+}
+
+.login {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background-color: rgb(18, 175, 18);
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    white-space: nowrap; /* Impede o botão de quebrar linha */
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divisao {
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    }
+
+    .nav-links {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .input-container {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .email-input,
+    .pass-input,
+    .login {
+        margin-left: 0;
+        width: 100px;
+        max-width: 300px; /* Limita a largura dos inputs */
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .png {
+        width: 120px;
+    }
+
+    .ancora {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .login {
+        padding: 6px 10px;
+    }
+}
